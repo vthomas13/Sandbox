@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Sandbox';
+  date: Date;
+  constructor() {
+    this.tick();
+  }
+  tick() {
+    setInterval(() => { this.date = new Date() }, 1000);
+  }
+
 }
